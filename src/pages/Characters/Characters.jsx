@@ -15,15 +15,15 @@ export default function Characters() {
 
   return (
     <Grid paddingY={3} paddingX={2} container spacing={2}>
-      {data.data.data?.results?.map((character) => {
+      {data.data.data?.results?.map((character) => (
         <Grid key={character.id} item xs={12} md={3}>
           <CharacterCard
             title={character.name}
             id={character.id}
             img={`${character.thumbnail.path}.${character.thumbnail.extension}`}
           />
-        </Grid>;
-      })}
+        </Grid>
+      ))}
     </Grid>
   );
 }
